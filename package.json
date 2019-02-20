@@ -14,5 +14,8 @@
   "bugs": {
     "url": "https://github.com/pardo-c/2019SpringAppProject/issues"
   },
-  "homepage": "https://github.com/pardo-c/2019SpringAppProject#readme"
+  "homepage": "https://github.com/pardo-c/2019SpringAppProject#readme",
+  "dependencies": {
+    "nodemon": "^1.18.10"
+  }
 }
