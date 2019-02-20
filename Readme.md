@@ -15,3 +15,6 @@ Future:
  in any area of computers. This field is a never-ending cycle of constantly learning the latest and greatest software tools
  and programming languages, which is one of the reasons why I decided to pursue this field! So, if I end up in a career 
  where I am involved, improving my skills, and feel respected/valued I will be content.
+
+
+Living Forward
