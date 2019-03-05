@@ -5,16 +5,11 @@ Past:
    In past semesters, I have been a teaching assistant for CS1 and Language Processing. I currently am a teaching assistant 
    for Language Processing again and am assigned as extra help for general Linux questions. I have taken Database Design, 
    Compiler Design, Cloud Computing, Data Science, Programming and Data Structures, Database management, and System on Chip.
-   Projects I am currently working on is building a backend for LLVM to support RISC-V and attempting to build an Alexa Skill.
-   Although, every time I start back on the skill, I get freaked out thinking about how many of the devices we use invade our 
-   privacy and then I stop. Perhaps I should decide on another project!
 Future:
  I am taking this class because I know the skills learned in this class are 
- essential to full stack engineering positions. Although I hope to find myself in company working with 
- the lower level side of machines such as operating systems or compilers, I will be happy to find a career
- in any area of computers. This field is a never-ending cycle of constantly learning the latest and greatest software tools
- and programming languages, which is one of the reasons why I decided to pursue this field! So, if I end up in a career 
- where I am involved, improving my skills, and feel respected/valued I will be content.
+ essential to full stack engineering positions.
 
+App Ideas:
 
-Living Forward
+Name: Living Forward
+Description: I do not want to create just an exercise app, I want it to involve mental health and dogs. Such as uploading feel good stories on the exercise you did that day made your life a little bit better or uploading pictures of people exercising with their pets.
