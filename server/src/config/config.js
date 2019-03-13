@@ -1,0 +1,19 @@
+module.exports = {
+  port: process.env.PORT || 8081,
+  // declare db attribute, which has all sequelize configurations
+  db: {
+    database: process.env.DB_NAME || 'livingforward',
+    user: process.env.DB_USER || 'livingforward',
+    password: process.env.DB_PASS || 'livingforward',
+    options: {
+      // determine the database you will connect to
+      dialect: process.env.DIALECT || 'sqlite',
+
+      // tell sequelize the location of database you want to connect to
+      host: process.env.HOST || 'localhost',
+      
+      // tell sequelize where to store database files
+      storage: './2019SpringAppProject.sqlite'
+    }
+  }
+}
