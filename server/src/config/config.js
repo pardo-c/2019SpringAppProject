@@ -15,5 +15,11 @@ module.exports = {
       // tell sequelize where to store database files
       storage: './2019SpringAppProject.sqlite'
     }
+  },
+  // define authentication key for AuthenticationController.js
+  authentication: {
+    // used to sign jwt token: pass it a secret string-only known by server
+    jwtSecret: process.env.JWT_SECRET || 'secret'
   }
 }
+

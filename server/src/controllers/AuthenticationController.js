@@ -1,5 +1,20 @@
 const {User} = require('../models')
 
+// allow program to utilize jsonwebtoken
+const jwt = require('jsonwebtoken')
+
+// allow program access to config.js
+const config = require('../config/config')
+
+// create function to sign a user object using jwt library to give back jwt token
+function jwtSignUser (user) {
+  const ONE_WEEK = 60 * 60 * 24 * 7
+  // give user param
+  return jwt.sign(user, config.authentication.jwtSecret, {
+    expiresIn: ONE_WEEK
+  })
+}
+
 
 
 module.exports = {
@@ -43,7 +58,9 @@ module.exports = {
       }
       const userJson = user.toJSON()
       res.send({
-        user: userJson
+        user: userJson,
+        // validate token
+        token: jwtSignUser(userJson)
       })
     } catch (err) {
         res.status(500).send({
