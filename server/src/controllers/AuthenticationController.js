@@ -48,7 +48,7 @@ module.exports = {
         })
       }
       // ensure password entered matches password in user model
-      const isPasswordValid = password === user.password
+      const isPasswordValid = password === await user.comparePassword(password)
 
       // if password is not correct
       if (!isPasswordValid) {
@@ -59,7 +59,7 @@ module.exports = {
       const userJson = user.toJSON()
       res.send({
         user: userJson,
-        // validate token
+        // validate token and return
         token: jwtSignUser(userJson)
       })
     } catch (err) {

@@ -32,8 +32,7 @@ fs
 
   // for each file that we found, declare a model and import a full path to sequlize
   .forEach((file) => {
-    const model = sequelize.import(path.join(__dirname, file))
-
+    model = sequelize.import(path.join(__dirname, file))
     // set the db to the created model
     db[model.name] = model
   })
