@@ -40,10 +40,14 @@ export default {
   methods: {
     async login () {
       try {
-        await AuthenticationService.login({
+        // keep track of response returned
+        const response = await AuthenticationService.login({
           email: this.email,
           password: this.password
         })
+        // call setToken method from store.js actions
+        this.$store.dispatch('setToken', response.data.token)
+        this.$store.dispatch('setUser', response.data.user)
       } catch (error) {
         // error.response.data what is returned from axios
         this.error = error.response.data.error

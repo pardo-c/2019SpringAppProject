@@ -46,10 +46,13 @@ export default {
   methods: {
     async register () {
       try {
-        await AuthenticationService.register({
+        // keep track of response
+        const response = await AuthenticationService.register({
           email: this.email,
           password: this.password
         })
+        this.$store.dispatch('setToken', response.data.token)
+        this.$store.dispatch('setUser', response.data.user)
       } catch (error) {
         // error.response.data what is returned from axios
         this.error = error.response.data.error

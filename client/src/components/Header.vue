@@ -11,19 +11,18 @@
     </v-btn>
   </v-toolbar-items>
 <!-- v-spacer allows you to put things all the way to the right -->
-  <v-spacer>
-  </v-spacer>
+  <v-spacer></v-spacer>
   <v-toolbar-items>
       <!-- navigate to register page-->
       <router-link to="register">
-      <v-btn flat>
+      <v-btn v-if="!$store.state.isUserLoggedIn">
            <!-- router-link will search through index.js in router folder-->
         Sign up
     </v-btn>
      </router-link>
          <!-- navigate to login page-->
       <router-link to="login">
-      <v-btn flat>
+      <v-btn v-if="!$store.state.isUserLoggedIn">
            <!-- router-link will search through index.js in router folder-->
         Login
     </v-btn>
