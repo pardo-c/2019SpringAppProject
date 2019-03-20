@@ -15,7 +15,7 @@ app.use(cors())
 // attach all different endpoints to app variable
 require('./routes')(app)
 // connect database to what you configure it for
-sequelize.sync({force: true})
+sequelize.sync({force: false})
   .then(() => {
     // specifiy port for app
     app.listen(config.port)
