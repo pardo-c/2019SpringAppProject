@@ -6,9 +6,11 @@
         </router-link>
     </v-toolbar-title>
   <v-toolbar-items>
+    <router-link to="exercises">
     <v-btn flat dark>
           Search Exercises
     </v-btn>
+     </router-link>
   </v-toolbar-items>
 <!-- v-spacer allows you to put things all the way to the right -->
   <v-spacer></v-spacer>
@@ -27,12 +29,25 @@
         Login
     </v-btn>
       </router-link>
+      <v-btn v-if="$store.state.isUserLoggedIn"
+      @click="logout">
+        Logout
+    </v-btn>
   </v-toolbar-items>
   </v-toolbar>
 </template>
 
 <script>
 export default {
+  methods: {
+    logout () {
+      this.$store.dispatch('setToken', null)
+      this.$store.dispatch('setUser', null)
+      this.$router.push({
+        name: 'HelloWorld'
+      })
+    }
+  }
 
 }
 </script>
