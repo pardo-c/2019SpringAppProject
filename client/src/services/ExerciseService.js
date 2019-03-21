@@ -4,5 +4,8 @@ export default {
   // exercises does not have any parameters
   index () {
     return Api().get('exercises')
+  },
+  post (exercise) {
+    return Api().post('exercises', exercise)
   }
 }

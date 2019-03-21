@@ -2,8 +2,12 @@
   <v-layout column>
    <v-flex xs6 offset-xs3>
     <panel title='Exercises'>
+      <v-btn
+        slot="action"
+        @click="navigateTo({name: '/exercises/create'})">
+        add</v-btn>
         <div v-for="exercise in exercises"
-          :key="exercise.name">
+          :key="exercise.id">
           {{exercise.name}}
           {{exercise.type}}
           {{exercise.difficulty}}
@@ -30,12 +34,17 @@ export default {
           difficulty: 'Easy'
         }
       ] */
-      songs: null
+      exercises: null
+    }
+  },
+  methods: {
+    navigateTo (route) {
+      this.$router.push(route)
     }
   },
   async mounted () {
     // get request from backend
-    this.exercises = await ExerciseService.index()
+    this.exercises = (await ExerciseService.index()).data
   }
 }
 </script>
