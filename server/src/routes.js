@@ -7,6 +7,9 @@ const AuthenticationControllerPolicy = require('./policies/AuthenticationControl
 // for exercises table
 const ExercisesController = require('./controllers/ExercisesController')
 
+// for Uplift table
+const UpliftController = require('./controllers/UpliftController')
+
 // export routes associated with authentication
 module.exports = (app) => {
   // express.js/middleware endpoint: callback function
@@ -18,10 +21,19 @@ module.exports = (app) => {
   app.post('/login',
     AuthenticationController.login)
   
+  // call index method from EC
   app.get('/exercises',
     ExercisesController.index)
-
+  // call show method from EC
+  app.get('/exercises/:exerciseId',
+    ExercisesController.show)
+  // call post method from EC
   app.post('/exercises',
     ExercisesController.post)
+
+  app.post('/uplift',
+    UpliftController.post)
+  app.get('/uplift',
+    UpliftController.index)
 }
 

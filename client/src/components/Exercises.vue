@@ -1,16 +1,40 @@
 <template>
   <v-layout column>
-   <v-flex xs6 offset-xs3>
+   <v-flex>
     <panel title='Exercises'>
       <v-btn
         slot="action"
-        @click="navigateTo({name: '/exercises/create'})">
-        add</v-btn>
+        @click="navigateTo({name: 'exercises-create'})">
+        add
+        </v-btn>
         <div v-for="exercise in exercises"
           :key="exercise.id">
-          {{exercise.name}}
-          {{exercise.type}}
-          {{exercise.difficulty}}
+
+          <v-layout>
+            <v-flex xs6>
+              <div class="exercise-name">
+                {{exercise.name}}
+                </div>
+                 <div class="exercise-type">
+                {{exercise.type}}
+                </div>
+                 <div class="exercise-difficulty">
+                {{exercise.difficulty}}
+                </div>
+              </v-flex>
+               <v-btn
+        @click="navigateTo({
+          name: 'exercise',
+          params: {
+            exerciseId: exercise.id
+          }
+        })">
+        View
+        </v-btn>
+            <v-flex xs6>
+              <img class="exercise-gifURL" :src="exercise.gifURL" />
+                </v-flex>
+         </v-layout>
         </div>
     </panel>
   </v-flex>

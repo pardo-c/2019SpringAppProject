@@ -11,7 +11,19 @@ module.exports = {
       res.send(exercises)
     } catch (err) {
         res.status(500).send({
-          error: 'An error has occured trying to retrieve songs.'
+          error: 'An error has occured trying to retrieve exercises.'
+      })
+    }
+  },
+  async show (req,res) {
+    try {
+      // call sequelize object
+      const exercise = await Exercises.findById(req.params.exerciseId)
+      // return viewed exercise
+      res.send(exercise)
+    } catch (err) {
+        res.status(500).send({
+          error: 'An error has occured trying to show exercise.'
       })
     }
   },
@@ -23,7 +35,7 @@ module.exports = {
       res.send(exercise)
     } catch (err) {
         res.status(500).send({
-          error: 'An error has occured trying to create song. Sorry.'
+          error: 'An error has occured trying to create exercise. Sorry.'
       })
     }
   }

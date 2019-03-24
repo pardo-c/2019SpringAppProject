@@ -5,6 +5,9 @@ export default {
   index () {
     return Api().get('exercises')
   },
+  show (exerciseId) {
+    return Api().get(`exercises/${exerciseId}`)
+  },
   post (exercise) {
     return Api().post('exercises', exercise)
   }

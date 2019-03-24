@@ -3,7 +3,7 @@
  <v-toolbar flat dense class="purple" dark>
  <!-- {{one way binding in vue}} -->
  <v-toolbar-title>{{title}}</v-toolbar-title>
- <v-btn><v-icon>add</v-icon></v-btn>
+ <slot name="action" />
  </v-toolbar>
     <div class="pl-4 pr-4 pt-2 pb-2">
       <slot>
