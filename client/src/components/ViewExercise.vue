@@ -1,21 +1,32 @@
 <template>
-    <h1> view exercise </h1>
+    <panel title="View">
+      <!-- from exxercises table -->
+      <div> {{exercises.name}} -
+            {{exercises.difficulty}} -
+            {{exercises.type}} -
+            {{exercises.gifURL}}
+      </div>
+    </panel>
 </template>
 <script>
 import ExerciseService from '@/services/ExerciseService'
+import Panel from '@/components/Panel'
 export default {
   data () {
     return {
-      song: null
+      exercises: {}
     }
   },
   // grab data from existing table. when mounted, run function
   async mounted () {
     /* grab exercise id by going to vuex ($store)
     the state in vuex, the route to the id in app, parameters */
-    const exerciseId = this.$store.state.route.params.exercisesId
+    const exerciseId = this.$store.state.route.params.exerciseId
     // pass exercise id to show it.
-    this.exercise = await ExerciseService.show(exerciseId)
+    this.exercises = (await ExerciseService.show(exerciseId)).data
+  },
+  components: {
+    Panel
   }
 }
 </script>
