@@ -5,6 +5,7 @@ import Register from '@/components/Register'
 import Login from '@/components/Login'
 import Exercises from '@/components/Exercises'
 import CreateExercise from '@/components/CreateExercise'
+import EditExercise from '@/components/EditExercise'
 import ViewExercise from '@/components/ViewExercise'
 Vue.use(Router)
 export default new Router({
@@ -37,6 +38,11 @@ export default new Router({
       path: '/exercises/create',
       name: 'exercises-create',
       component: CreateExercise
+    },
+    { // create new path for creating an exercise
+      path: '/exercises/:exerciseId/edit',
+      name: 'exercises-edit',
+      component: EditExercise
     },
     {
       path: '/exercises/:exerciseId',

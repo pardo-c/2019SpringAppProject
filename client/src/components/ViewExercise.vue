@@ -1,11 +1,20 @@
 <template>
     <panel title="View">
-      <!-- from exxercises table -->
+      <!-- from exercises table: shw data with id = _ -->
       <div> {{exercises.name}} -
             {{exercises.difficulty}} -
             {{exercises.type}} -
             {{exercises.gifURL}}
       </div>
+      <v-btn
+       @click="navigateTo({
+          name: 'exercises-edit',
+          params: {
+            exerciseId: exercises.id
+          }
+        })">
+        Edit
+        </v-btn>
     </panel>
 </template>
 <script>
@@ -24,6 +33,11 @@ export default {
     const exerciseId = this.$store.state.route.params.exerciseId
     // pass exercise id to show it.
     this.exercises = (await ExerciseService.show(exerciseId)).data
+  },
+  methods: {
+    navigateTo (route) {
+      this.$router.push(route)
+    }
   },
   components: {
     Panel
