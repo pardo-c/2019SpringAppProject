@@ -39,8 +39,8 @@
     <v-btn
         dark
         class="purple"
-        @click="create">
-        Edit Exercise
+        @click="save">
+        Edit and Save Exercise
         </v-btn>
   </div>
 </template>
@@ -65,7 +65,7 @@ export default {
   },
   // create 'create method'
   methods: {
-    async create () {
+    async save () {
       this.error = null
       // make sure all inputs filled before creation of exercise
       const areAllFieldsFilledIn = Object
@@ -75,16 +75,19 @@ export default {
         this.error = 'Please fill in all required fields.'
         return
       }
-      try {
-        // call Api
-        await ExerciseService.post(this.exercise)
-        // go back to exercise page for now
-        this.$router.push({
-          name: 'exercises'
-        })
-      } catch (err) {
+      // use put method to replace info in table
+      await ExerciseService.put(exerciseId)
+    }
+  },
+  async mounted () {
+    try {
+      /* grab exercise id by going to vuex ($store)
+      the state in vuex, the route to the id in app, parameters */
+      const exerciseId = this.$store.state.route.params.exerciseId
+      // pass exercise id to show it.
+      this.exercises = (await ExerciseService.show(exerciseId)).data
+    } catch (err) {
         console.log(err)
-      }
     }
   },
   components: {
