@@ -96,7 +96,7 @@ export default {
       the state in vuex, the route to the id in app, parameters */
       const exerciseId = this.$store.state.route.params.exerciseId
       // pass exercise id to show it.
-      this.exercises = (await ExerciseService.show(exerciseId)).data
+      this.exercise = (await ExerciseService.show(exerciseId)).data
     } catch (err) {
       console.log(err)
     }
