@@ -30,6 +30,9 @@ module.exports = (app) => {
   // call post method from EC
   app.post('/exercises',
     ExercisesController.post)
+  app.put('/exercises/:exerciseId',
+    ExercisesController.put)
+
 
   app.post('/uplift',
     UpliftController.post)

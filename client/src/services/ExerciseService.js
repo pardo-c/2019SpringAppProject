@@ -10,5 +10,8 @@ export default {
   },
   post (exercise) {
     return Api().post('exercises', exercise)
+  },
+  put (exercise) {
+    return Api().put(`exercises/${exercise.id}`, exercise)
   }
 }

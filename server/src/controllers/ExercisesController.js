@@ -38,5 +38,21 @@ module.exports = {
           error: 'An error has occured trying to create exercise. Sorry.'
       })
     }
+  },
+  async put (req,res) {
+    try {
+      // call sequelize object
+      const exercise = await Exercises.update(req.body, {
+        where: {
+          id: req.params.exerciseId
+        }
+      })
+      // send back exercise object
+      res.send(req.body)
+    } catch (err) {
+        res.status(500).send({
+          error: 'An error has occured trying to update this exercise. Sorry.'
+      })
+    }
   }
 }

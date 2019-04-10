@@ -75,8 +75,19 @@ export default {
         this.error = 'Please fill in all required fields.'
         return
       }
-      // use put method to replace info in table
-      await ExerciseService.put(exerciseId)
+      const exerciseId = this.$store.state.route.params.exerciseId
+      try {
+        // use put method to replace info in table
+        await ExerciseService.put(this.exercise)
+        this.$router.push({
+          name: 'exercises',
+          params: {
+            exerciseId: exerciseId
+          }
+        })
+      } catch (err) {
+        console.log(err)
+      }
     }
   },
   async mounted () {
@@ -87,7 +98,7 @@ export default {
       // pass exercise id to show it.
       this.exercises = (await ExerciseService.show(exerciseId)).data
     } catch (err) {
-        console.log(err)
+      console.log(err)
     }
   },
   components: {
