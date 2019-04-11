@@ -19,7 +19,6 @@
 </template>
 <script>
 import ExerciseService from '@/services/ExerciseService'
-import Panel from '@/components/Panel'
 export default {
   data () {
     return {
@@ -40,7 +39,6 @@ export default {
     }
   },
   components: {
-    Panel
   }
 }
 </script>

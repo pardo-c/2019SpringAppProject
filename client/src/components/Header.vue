@@ -8,7 +8,7 @@
   <v-toolbar-items>
     <router-link to="exercises">
     <v-btn flat dark>
-          Search Exercises
+          Exercises
     </v-btn>
      </router-link>
   </v-toolbar-items>

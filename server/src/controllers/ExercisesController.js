@@ -48,7 +48,7 @@ module.exports = {
         }
       })
       // send back exercise object
-      res.send(exercise)
+      res.send(req.body)
     } catch (err) {
         res.status(500).send({
           error: 'An error has occured trying to update this exercise. Sorry.'

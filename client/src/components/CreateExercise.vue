@@ -46,7 +46,6 @@
 </template>
 
 <script>
-import Panel from '@/components/Panel'
 import ExerciseService from '@/services/ExerciseService'
 
 export default {
@@ -88,7 +87,6 @@ export default {
     }
   },
   components: {
-    Panel
   }
 }
 </script>

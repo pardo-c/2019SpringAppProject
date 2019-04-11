@@ -7,6 +7,13 @@
         @click="navigateTo({name: 'exercises-create'})">
         add
         </v-btn>
+
+        <v-btn
+        slot="action"
+        @click="navigateTo({name: 'exercise-search'})">
+        Search
+        </v-btn>
+
         <div v-for="exercise in exercises"
           :key="exercise.id">
 
@@ -43,11 +50,7 @@
 
 <script>
 import ExerciseService from '@/services/ExerciseService'
-import Panel from '@/components/Panel'
 export default {
-  components: {
-    Panel
-  },
   data () {
     // return array for for-loop
     return {
@@ -66,10 +69,18 @@ export default {
       this.$router.push(route)
     }
   },
-  async mounted () {
+  watch: {
+    '$route.query.search': {
+      immediate: true,
+      async handler (value) {
+        this.exercises = (await ExerciseService.index(value)).data
+      }
+    }
+  }
+  /* async mounted () {
     // get request from backend
     this.exercises = (await ExerciseService.index()).data
-  }
+  } */
 }
 </script>
 

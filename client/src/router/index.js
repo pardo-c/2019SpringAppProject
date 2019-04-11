@@ -7,6 +7,7 @@ import Exercises from '@/components/Exercises'
 import CreateExercise from '@/components/CreateExercise'
 import EditExercise from '@/components/EditExercise'
 import ViewExercise from '@/components/ViewExercise'
+import ExerciseSearchPanel from '@/components/ExerciseSearchPanel'
 Vue.use(Router)
 export default new Router({
   routes: [
@@ -32,6 +33,12 @@ export default new Router({
       path: '/exercises',
       name: 'exercises',
       component: Exercises
+    },
+    {
+      // create new path for search exercises
+      path: '/exercise/exercisesearch',
+      name: 'exercise-search',
+      component: ExerciseSearchPanel
     },
     {
       // create new path for creating an exercise
