@@ -50,17 +50,14 @@
 
 <script>
 import ExerciseService from '@/services/ExerciseService'
+import ExerciseSearchPanel from './ExerciseSearchPanel'
 export default {
+  components: {
+    ExerciseSearchPanel
+  },
   data () {
-    // return array for for-loop
+    // return exercises
     return {
-      /* exercises: [
-        {
-          name: 'Walking',
-          type: 'Cardio',
-          difficulty: 'Easy'
-        }
-      ] */
       exercises: null
     }
   },
@@ -76,11 +73,11 @@ export default {
         this.exercises = (await ExerciseService.index(value)).data
       }
     }
-  }
-  /* async mounted () {
+  },
+  async mounted () {
     // get request from backend
     this.exercises = (await ExerciseService.index()).data
-  } */
+  }
 }
 </script>
 

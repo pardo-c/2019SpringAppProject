@@ -26,8 +26,10 @@ export default {
         }
       }
       this.$router.push(route)
-    }, 700),
+    }, 5000),
+    // add watcher to search query string
     '$route.query.search': {
+      // as input changes in search box, change handler and vice versa
       immediate: true,
       handler (value) {
         this.search = value

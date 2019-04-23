@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import createPersistedState from 'vuex-persistedstate'
 
 // utilize Vuex and have access to all vue components
 Vue.use(Vuex)
@@ -9,6 +10,9 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   // strict means cannot modify state unless with action or mutation
   strict: true,
+  plugins: [
+    createPersistedState()
+  ],
   // global states of application that we want to keep track off
   state: {
     token: null,

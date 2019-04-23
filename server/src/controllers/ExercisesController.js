@@ -3,11 +3,28 @@ module.exports = {
   // define routes in express with end points.
   async index (req,res) {
     try {
-      // call sequelize object
-      const exercises = await Exercises.findAll ({
+      // assign variable exercises based on path user takes
+      let exercises = null
+      const search = req.query.search
+      if (search) {
+        // call sequelize object
+        exercises = await Exercises.findAll({
+          where: {
+            $or: [
+              'name', 'type', 'difficulty'
+            ].map(key => ({
+              [key]: {
+                $like: `%${search}%`
+              }
+            }))
+          }
+        })
+      } else {
         // limit number of exercises seen in UI
-        limit: 10
-      })    
+        exercises = await Exercises.findAll({
+          limit: 10
+        })
+      } 
       res.send(exercises)
     } catch (err) {
         res.status(500).send({

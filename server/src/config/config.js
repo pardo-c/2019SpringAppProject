@@ -1,3 +1,5 @@
+const path = require('path')
+
 module.exports = {
   port: process.env.PORT || 8081,
   // declare db attribute, which has all sequelize configurations
@@ -13,7 +15,7 @@ module.exports = {
       host: process.env.HOST || 'localhost',
       
       // tell sequelize where to store database files
-      storage: './2019SpringAppProject.sqlite'
+      storage: path.resolve(__dirname, '../../2019SpringAppProject.sqlite')
     }
   },
   // define authentication key for AuthenticationController.js

@@ -55,6 +55,10 @@ export default new Router({
       path: '/exercises/:exerciseId',
       name: 'exercise',
       component: ViewExercise
+    },
+    {
+      path: '*',
+      redirect: 'exercises'
     }
   ]
 })

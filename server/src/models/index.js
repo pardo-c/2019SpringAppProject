@@ -37,6 +37,12 @@ fs
     db[model.name] = model
   })
 
+  // for search component
+  Object.keys(db).forEach(function (modelName) {
+    if ('associate' in db[modelName]) {
+      db[modelName].associate(db)
+    }
+  })
 // declare useful variables onto db object so that we have access to both objects and models
 db.sequelize = sequelize
 db.Sequelize = Sequelize
