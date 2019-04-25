@@ -1,58 +1,14 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
-    <ul>
-      <li>
-        <a
-          href="https://vuejs.org"
-          target="_blank"
-        >
-          Core Docs
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://forum.vuejs.org"
-          target="_blank"
-        >
-          Forum
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://chat.vuejs.org"
-          target="_blank"
-        >
-          Community Chat
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://twitter.com/vuejs"
-          target="_blank"
-        >
-          Twitter
-        </a>
-      </li>
-      <br>
-      <li>
-        <a
-          href="http://vuejs-templates.github.io/webpack/"
-          target="_blank"
-        >
-          Docs for This Template
-        </a>
-      </li>
-    </ul>
-    <h2>Ecosystem</h2>
+    <h2>Learn More</h2>
     <ul>
       <li>
         <a
           href="http://router.vuejs.org/"
           target="_blank"
         >
-          vue-router
+          What does it mean to live forward?
         </a>
       </li>
       <li>
@@ -60,7 +16,7 @@
           href="http://vuex.vuejs.org/"
           target="_blank"
         >
-          vuex
+          Uplift yourself!
         </a>
       </li>
       <li>
@@ -68,7 +24,7 @@
           href="http://vue-loader.vuejs.org/"
           target="_blank"
         >
-          vue-loader
+          What kind of exercise are you feeling?
         </a>
       </li>
       <li>
@@ -76,7 +32,7 @@
           href="https://github.com/vuejs/awesome-vue"
           target="_blank"
         >
-          awesome-vue
+          Register!
         </a>
       </li>
     </ul>
@@ -88,7 +44,7 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to Living Forward'
     }
   }
 }
@@ -108,6 +64,6 @@ li {
   margin: 0 10px;
 }
 a {
-  color: #42b983;
+  color: #ffbf00;
 }
 </style>

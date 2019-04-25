@@ -66,9 +66,12 @@ export default {
       this.$router.push(route)
     }
   },
+  // watcher for ExerciseSearchPanel
   watch: {
+    // listen to when query search value changes
     '$route.query.search': {
       immediate: true,
+      // invoke handler for search
       async handler (value) {
         this.exercises = (await ExerciseService.index(value)).data
       }
@@ -82,4 +85,8 @@ export default {
 </script>
 
 <style scoped>
+.exercise-gifURL {
+  width: 50%;
+  margin: 0 auto;
+}
 </style>

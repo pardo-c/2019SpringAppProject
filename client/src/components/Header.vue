@@ -1,11 +1,11 @@
 <template>
   <v-toolbar fixed class="purple">
-    <v-toolbar-title class="mr-4">
+    <v-toolbar-items class="mr-4">
         <router-link to="/">
-            <v-btn flat>Living Forward</v-btn>
+            <v-btn flat dark>Living Forward</v-btn>
         </router-link>
-    </v-toolbar-title>
-  <v-toolbar-items>
+    </v-toolbar-items>
+  <v-toolbar-items class="mr-4">
     <router-link to="exercises">
     <v-btn flat dark>
           Exercises

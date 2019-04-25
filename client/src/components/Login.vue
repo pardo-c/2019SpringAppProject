@@ -20,7 +20,7 @@ v-model="password"
 placeholder="password"
 />
 <br>
-<div class = "error" v-html="error"/>
+<div class = "danger-alert" v-html="error"/>
 <br>
 <button @click="login"> Login </button>
 </div>
@@ -48,6 +48,10 @@ export default {
         // call setToken method from store.js actions
         this.$store.dispatch('setToken', response.data.token)
         this.$store.dispatch('setUser', response.data.user)
+        // reroute user to main page after logging in
+        this.$router.push({
+          name: 'exercises'
+        })
       } catch (error) {
         // error.response.data what is returned from axios
         this.error = error.response.data.error
@@ -58,7 +62,5 @@ export default {
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.error {
-  color: red;
-}
+
 </style>

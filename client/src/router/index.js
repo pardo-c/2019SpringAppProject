@@ -56,9 +56,9 @@ export default new Router({
       name: 'exercise',
       component: ViewExercise
     },
-    {
+    { // if page does not exits, reroute to
       path: '*',
-      redirect: 'exercises'
+      redirect: 'HelloWorld'
     }
   ]
 })

@@ -53,6 +53,10 @@ export default {
         })
         this.$store.dispatch('setToken', response.data.token)
         this.$store.dispatch('setUser', response.data.user)
+        // reroute user to main page
+        this.$router.push({
+          name: 'exercises'
+        })
       } catch (error) {
         // error.response.data what is returned from axios
         this.error = error.response.data.error

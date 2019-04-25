@@ -15,6 +15,7 @@ export default {
       search: ''
     }
   },
+  // 20 min
   watch: {
     search: _.debounce(async function (value) {
       const route = {
