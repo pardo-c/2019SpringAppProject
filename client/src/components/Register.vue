@@ -53,7 +53,7 @@ export default {
         })
         this.$store.dispatch('setToken', response.data.token)
         this.$store.dispatch('setUser', response.data.user)
-        // reroute user to main page
+        // reroute user to exercise page after register
         this.$router.push({
           name: 'exercises'
         })

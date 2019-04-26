@@ -48,7 +48,7 @@ export default {
         // call setToken method from store.js actions
         this.$store.dispatch('setToken', response.data.token)
         this.$store.dispatch('setUser', response.data.user)
-        // reroute user to main page after logging in
+        // reroute user to exercise page after logging in
         this.$router.push({
           name: 'exercises'
         })

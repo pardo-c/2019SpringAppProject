@@ -5,10 +5,17 @@
             <v-btn flat dark>Living Forward</v-btn>
         </router-link>
     </v-toolbar-items>
-  <v-toolbar-items class="mr-4">
+  <v-toolbar-items>
     <router-link to="exercises">
     <v-btn flat dark>
           Exercises
+    </v-btn>
+     </router-link>
+  </v-toolbar-items>
+    <v-toolbar-items >
+    <router-link to="login">
+    <v-btn  flat dark v-if="$store.state.isUserLoggedIn">
+          Friends
     </v-btn>
      </router-link>
   </v-toolbar-items>

@@ -1,38 +1,42 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <h2>Learn More</h2>
+    <br>
     <ul>
       <li>
-        <a
-          href="http://router.vuejs.org/"
-          target="_blank"
-        >
-          What does it mean to live forward?
+        <a>
+      <router-link to="register">
+      <v-btn small color="amber">
+           What does it mean to live forward?
+    </v-btn>
+     </router-link>
         </a>
       </li>
       <li>
-        <a
-          href="http://vuex.vuejs.org/"
-          target="_blank"
-        >
+        <a>
+      <router-link to="register">
+      <v-btn small color="amber">
           Uplift yourself!
+    </v-btn>
+     </router-link>
         </a>
       </li>
       <li>
-        <a
-          href="http://vue-loader.vuejs.org/"
-          target="_blank"
-        >
-          What kind of exercise are you feeling?
+        <a>
+        <router-link to="motivate">
+      <v-btn small color="amber">
+        Don't feel like exercising?
+    </v-btn>
+     </router-link>
         </a>
       </li>
       <li>
-        <a
-          href="https://github.com/vuejs/awesome-vue"
-          target="_blank"
-        >
-          Register!
+        <a>
+      <router-link to="register">
+      <v-btn small color="amber" v-if="!$store.state.isUserLoggedIn">
+        Register!
+    </v-btn>
+     </router-link>
         </a>
       </li>
     </ul>
@@ -53,7 +57,10 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 h1, h2 {
-  font-weight: normal;
+  font-weight: bold;
+  font-variant: small-caps;
+  color: #ffbf00;
+  font-size: 70px;
 }
 ul {
   list-style-type: none;
@@ -62,6 +69,7 @@ ul {
 li {
   display: inline-block;
   margin: 0 10px;
+   background-image: url('./assets/rainbo.gif');
 }
 a {
   color: #ffbf00;

@@ -8,6 +8,7 @@ import CreateExercise from '@/components/CreateExercise'
 import EditExercise from '@/components/EditExercise'
 import ViewExercise from '@/components/ViewExercise'
 import ExerciseSearchPanel from '@/components/ExerciseSearchPanel'
+import Motivate from '@/components/Motivate'
 Vue.use(Router)
 export default new Router({
   routes: [
@@ -55,6 +56,11 @@ export default new Router({
       path: '/exercises/:exerciseId',
       name: 'exercise',
       component: ViewExercise
+    },
+    { // crete new path for motivate page
+      path: '/motivate',
+      name: 'motivate',
+      component: Motivate
     },
     { // if page does not exits, reroute to
       path: '*',

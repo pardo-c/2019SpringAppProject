@@ -7,16 +7,14 @@
         @click="navigateTo({name: 'exercises-create'})">
         add
         </v-btn>
-
         <v-btn
         slot="action"
         @click="navigateTo({name: 'exercise-search'})">
         Search
         </v-btn>
-
+         <ul>
         <div v-for="exercise in exercises"
           :key="exercise.id">
-
           <v-layout>
             <v-flex xs6>
               <div class="exercise-name">
@@ -43,6 +41,7 @@
                 </v-flex>
          </v-layout>
         </div>
+         </ul>
     </panel>
   </v-flex>
  </v-layout>
@@ -85,6 +84,10 @@ export default {
 </script>
 
 <style scoped>
+ul {
+  background-image: url("./assets/unicloud.gif");
+  background-size: 100%;
+}
 .exercise-gifURL {
   width: 50%;
   margin: 0 auto;

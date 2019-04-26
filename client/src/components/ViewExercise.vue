@@ -6,7 +6,7 @@
             {{exercises.type}} -
             {{exercises.gifURL}}
       </div>
-      <v-btn
+      <v-btn small
        @click="navigateTo({
           name: 'exercises-edit',
           params: {
@@ -15,6 +15,13 @@
         })">
         Edit
         </v-btn>
+        <v-spacer>
+            <v-btn small
+        slot="action"
+        @click="navigateTo({name: 'exercises'})">
+        Back
+        </v-btn>
+</v-spacer>
     </panel>
 </template>
 <script>
