@@ -9,6 +9,9 @@ import EditExercise from '@/components/EditExercise'
 import ViewExercise from '@/components/ViewExercise'
 import ExerciseSearchPanel from '@/components/ExerciseSearchPanel'
 import Motivate from '@/components/Motivate'
+import About from '@/components/About'
+import Uplift from '@/components/Uplift'
+import Friends from '@/components/Friends'
 Vue.use(Router)
 export default new Router({
   routes: [
@@ -61,6 +64,21 @@ export default new Router({
       path: '/motivate',
       name: 'motivate',
       component: Motivate
+    },
+    { // crete new path for about page
+      path: '/about',
+      name: 'about',
+      component: About
+    },
+    { // crete new path for uplift page
+      path: '/uplift',
+      name: 'uplift',
+      component: Uplift
+    },
+    { // crete new path for uplift page
+      path: '/friends',
+      name: 'friends',
+      component: Friends
     },
     { // if page does not exits, reroute to
       path: '*',

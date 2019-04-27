@@ -1,12 +1,13 @@
 <template>
   <div>
-    <p> This will be a place to find friends and add friends to user </p>
+    <h1> About </h1>
+    <p> This will be a paragraph about the app </p>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Friends'
+  name: 'About'
 }
 </script>
 

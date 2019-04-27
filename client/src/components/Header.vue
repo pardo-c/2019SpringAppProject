@@ -60,5 +60,10 @@ export default {
 </script>
 
 <style scoped>
+.purple {
+  background-image: url("./assets/unicloud.gif");
+  background-repeat: repeat;
+  background-size: 100%;
+}
 
 </style>

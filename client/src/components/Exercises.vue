@@ -1,18 +1,14 @@
 <template>
   <v-layout column>
    <v-flex>
+     <exercise-search-panel />
     <panel title='Exercises'>
       <v-btn
         slot="action"
         @click="navigateTo({name: 'exercises-create'})">
         add
         </v-btn>
-        <v-btn
-        slot="action"
-        @click="navigateTo({name: 'exercise-search'})">
-        Search
-        </v-btn>
-         <ul>
+        <ul>
         <div v-for="exercise in exercises"
           :key="exercise.id">
           <v-layout>
@@ -84,10 +80,6 @@ export default {
 </script>
 
 <style scoped>
-ul {
-  background-image: url("./assets/unicloud.gif");
-  background-size: 100%;
-}
 .exercise-gifURL {
   width: 50%;
   margin: 0 auto;

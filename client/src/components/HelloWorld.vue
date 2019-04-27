@@ -5,7 +5,7 @@
     <ul>
       <li>
         <a>
-      <router-link to="register">
+      <router-link to="about">
       <v-btn small color="amber">
            What does it mean to live forward?
     </v-btn>
@@ -14,7 +14,7 @@
       </li>
       <li>
         <a>
-      <router-link to="register">
+      <router-link to="uplift">
       <v-btn small color="amber">
           Uplift yourself!
     </v-btn>

@@ -1,6 +1,6 @@
 <template>
-  <div class="white elevation-2">
-    <v-toolbar flat dense class="purple" dark>
+  <div>
+    <v-toolbar class="purple">
       <v-toolbar-title>{{title}}</v-toolbar-title>
       <slot name="action" />
     </v-toolbar>
@@ -22,4 +22,8 @@ export default {
 </script>
 
 <style scoped>
+.purple {
+  background-image: url("./unicloud.gif");
+  background-size: 100%;
+}
 </style>

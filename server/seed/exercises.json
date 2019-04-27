@@ -1,0 +1,33 @@
+[
+  { 
+    "name": "Walking", 
+    "type": "Cardio",
+    "difficulty": "Easy",
+    "gifURL": "https://media.giphy.com/media/cTAXJCW6LniA8/giphy.gif",
+    "youtubeId": "njeZ29umqVE"
+  },
+
+  { 
+    "name": "Treadmill",
+    "type": "cardio",
+    "difficulty": "Easy",
+    "gifURL": "https://media.giphy.com/media/VFDeGtRSHswfe/giphy.gif",
+    "youtubeId": "Pi3lKNIgfwU"
+  },
+
+  { 
+    "name": "Squats",
+    "type": "Resistance Training",
+    "difficulty": "Medium",
+    "gifURL": "https://media.giphy.com/media/nboUTbI0ADHwc/giphy.gif",
+    "youtubeId": "aclHkVaku9U"
+  },
+
+  { 
+    "name": "Side-Lying Leg Lifts",
+    "type": "Resistance Training",
+    "difficulty": "Medium",
+    "gifURL": "https://media.giphy.com/media/12TOAdbCuQe2wE/giphy.gif",
+    "youtubeId": "https://www.youtube.com/watch?v=jgh6sGwtTwk"
+  }
+]

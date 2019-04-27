@@ -1,9 +1,11 @@
 <template>
   <panel title="Search">
+    <v-flex xs6 offset-xs3>
     <v-text-field
-      label="Search by exercise name, type, or difficulty"
+      label="Filter by exercise name, type, or difficulty"
       v-model="search"
     ></v-text-field>
+    </v-flex>
   </panel>
 </template>
 
@@ -25,8 +27,8 @@ export default {
         route.query = {
           search: this.search
         }
+        this.$router.push(route)
       }
-      this.$router.push(route)
     }, 5000),
     // add watcher to search query string
     '$route.query.search': {
