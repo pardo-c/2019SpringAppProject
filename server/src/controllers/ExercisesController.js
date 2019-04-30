@@ -1,3 +1,4 @@
+'use strict'
 const {Exercises} = require('../models')
 module.exports = {
   // define routes in express with end points.

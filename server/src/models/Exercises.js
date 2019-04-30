@@ -1,4 +1,4 @@
-
+'use strict';
 module.exports = (sequelize, DataTypes) => {
   const Exercises = sequelize.define('Exercises', {
    // what makes an exercise?

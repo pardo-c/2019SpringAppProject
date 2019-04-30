@@ -6,7 +6,7 @@ const path = require('path')
 
 // create sequlize model to create sequelize object to connect to database
 const Sequelize = require('sequelize')
-
+'use strict';
 // include config file from config folder
 const config = require('../config/config')
 

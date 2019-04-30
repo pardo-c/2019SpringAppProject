@@ -1,3 +1,4 @@
+'use strict';
 // a controller has all your endpoints defined
 const AuthenticationController = require('./controllers/AuthenticationController')
 
@@ -10,8 +11,9 @@ const ExercisesController = require('./controllers/ExercisesController')
 const BookmarksController = require('./controllers/BookmarksController')
 
 // for Uplift table
-// const UpliftController = require('./controllers/UpliftController')
+const UpliftController = require('./controllers/UpliftController')
 
+const FriendsController = require('./controllers/FriendsController')
 // export routes associated with authentication
 module.exports = (app) => {
   // express.js/middleware endpoint: callback function
@@ -43,8 +45,11 @@ module.exports = (app) => {
   app.delete('/bookmarks/:bookmarkId',
     BookmarksController.delete)
     
-  /* app.post('/uplift',
+  app.post('/uplift',
     UpliftController.post)
   app.get('/uplift',
-    UpliftController.index) */
+    UpliftController.index)
+
+  app.get('/friends',
+    FriendsController.index)
 }

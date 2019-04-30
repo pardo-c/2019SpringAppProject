@@ -5,10 +5,23 @@
 </template>
 
 <script>
+import UpliftService from '@/services/UpliftService'
 export default {
-  name: 'Uplift'
+  data () {
+    return {
+      story: null
+    }
+  },
+  methods: {
+    navigateTo (route) {
+      this.$router.push(route)
+    }
+  },
+  async mounted () {
+    this.story = (await UpliftService.index()).data
+  }
 }
 </script>
 
-<style>
+<style scoped>
 </style>

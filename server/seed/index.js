@@ -1,11 +1,12 @@
+'use strict';
 // to avoid clearing database when adding new vue component create seed = script to populate database
 const {
     sequelize,
     Exercises,
     User,
-    Bookmark
-    // Friends,
-    // Uplift
+    Bookmark,
+    Friends,
+    Uplift
   } = require('../src/models')
 
 const Promise = require('bluebird')
@@ -13,11 +14,12 @@ const Promise = require('bluebird')
 const exercises = require('./exercises.json')
 const users = require('./users.json')
 const bookmarks = require('./bookmarks.json')
-// const friends = require('./friends.json')
-// const uplifts = require('./uplift.json')
+const friends = require('./friends.json')
+const uplifts = require('./uplift.json')
 
 sequelize.sync({force: true})
   .then(async function () {
+    
      // make sure we bring in all users/exercises/bookmarks
     await Promise.all(
     users.map(user => {
@@ -39,9 +41,9 @@ sequelize.sync({force: true})
           Friends.create(friend)
         })
       )
-    /* await Promise.all(
+    await Promise.all(
       uplifts.map(uplift => {
         Uplift.create(uplift)
       })
-    ) */ 
+    )
 })

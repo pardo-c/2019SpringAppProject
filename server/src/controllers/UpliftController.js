@@ -1,4 +1,5 @@
-/* const {Uplift} = require('../models')
+'use strict'
+const {Uplift} = require('../models')
 module.exports = {
   // define routes in express with end points.
   async index (req,res) {
@@ -27,4 +28,4 @@ module.exports = {
       })
     }
   }
-} */
+}
