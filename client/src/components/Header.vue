@@ -1,16 +1,17 @@
 <template>
   <v-toolbar fixed class="purple">
     <v-toolbar-items class="mr-4">
-        <router-link to="/">
-            <v-btn flat dark>Living Forward</v-btn>
-        </router-link>
+            <v-btn flat small outline color="black" @click="navigateTo({name: 'HelloWorld'})">Living Forward</v-btn>
     </v-toolbar-items>
-  <v-toolbar-items>
-    <router-link to="exercises">
-    <v-btn flat dark>
+  <v-toolbar-items class="mr-4">
+    <v-btn flat small outline color="black"  @click="navigateTo({name: 'exercises'})">
           Exercises
     </v-btn>
-     </router-link>
+  </v-toolbar-items>
+   <v-toolbar-items class="mr-4">
+    <v-btn flat small outline color="black"  @click="navigateTo({name: 'uplift'})">
+          Uplift
+    </v-btn>
   </v-toolbar-items>
     <v-toolbar-items >
     <router-link to="login">
@@ -20,23 +21,18 @@
      </router-link>
   </v-toolbar-items>
 <!-- v-spacer allows you to put things all the way to the right -->
-  <v-spacer></v-spacer>
+  <v-spacer ></v-spacer>
   <v-toolbar-items>
       <!-- navigate to register page-->
-      <router-link to="register">
-      <v-btn v-if="!$store.state.isUserLoggedIn">
+      <v-btn class="mr-4" flat small outline color="black"  v-if="!$store.state.isUserLoggedIn"  @click="navigateTo({name: 'register'})">
            <!-- router-link will search through index.js in router folder-->
         Sign up
     </v-btn>
-     </router-link>
          <!-- navigate to login page-->
-      <router-link to="login">
-      <v-btn v-if="!$store.state.isUserLoggedIn">
-           <!-- router-link will search through index.js in router folder-->
+      <v-btn flat small outline color="black" v-if="!$store.state.isUserLoggedIn" @click="navigateTo({name: 'login'})">
         Login
     </v-btn>
-      </router-link>
-      <v-btn v-if="$store.state.isUserLoggedIn"
+      <v-btn flat small outline color="black"  v-if="$store.state.isUserLoggedIn"
       @click="logout">
         Logout
     </v-btn>
@@ -53,6 +49,9 @@ export default {
       this.$router.push({
         name: 'HelloWorld'
       })
+    },
+    navigateTo (route) {
+      this.$router.push(route)
     }
   }
 

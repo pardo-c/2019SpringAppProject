@@ -1,7 +1,7 @@
 <template>
   <div>
-    <v-btn large @click="generate">
-      Generate some motivation!
+    <v-btn outline color="amber" large @click="generate">
+      <a>Generate some motivation<b>!</b></a>
     </v-btn>
     <div class="gif-container">
       <img :src="activeGif" />
@@ -48,5 +48,8 @@ export default {
 .gif-container img {
   margin-top:30px;
   min-width:600px;
+}
+a {
+  color:black
 }
 </style>

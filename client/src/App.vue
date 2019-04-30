@@ -2,7 +2,7 @@
   <div id="app">
      <v-app>
       <main>
-        <v-container fluid><iframe src="https://giphy.com/embed/5EJHDSPpFhbG0" width="380" height="155" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/dogs-exercise-workout-5EJHDSPpFhbG0"></a></p>      </v-container>
+        <v-container fluid><iframe src="https://giphy.com/embed/5EJHDSPpFhbG0" width="480" height="255" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/dogs-exercise-workout-5EJHDSPpFhbG0"></a></p>      </v-container>
            <router-view></router-view>
       </main>
     </v-app>

@@ -37,7 +37,7 @@ fs
     db[model.name] = model
   })
 
-  // for search component
+  // for each model we find, check for associate method to pass db object
   Object.keys(db).forEach(function (modelName) {
     if ('associate' in db[modelName]) {
       db[modelName].associate(db)

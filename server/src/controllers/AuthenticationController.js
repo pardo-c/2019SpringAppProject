@@ -56,7 +56,7 @@ module.exports = {
       // if password is not correct
       if (!isPasswordValid) {
         return res.status(403).send({
-          error: 'The login information iss incorrect'
+          error: 'The login information is incorrect'
         })
       }
       const userJson = user.toJSON()

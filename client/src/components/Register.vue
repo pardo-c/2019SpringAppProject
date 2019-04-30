@@ -4,8 +4,8 @@
      <v-card-text>
       <p class="text-xs-center">
       <div class="white elevation-2">
-        <v-toolbar flat dense class="purple" dark>
-        <v-toolbar-title>Register</v-toolbar-title>
+        <v-toolbar flat dense class="amber">
+        <v-toolbar-title><a>Register</a></v-toolbar-title>
         </v-toolbar>
         <div class="pl-4 pr-4 pt-2 pb-2">
           <input
@@ -21,7 +21,7 @@
             placeholder="password"
             />
           <br>
-          <div class = "error" v-html="error"/>
+          <div class ="error" v-html="error"/>
           <br>
           <button
             @click="register">
@@ -68,11 +68,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.error {
-  color: red;
+a{
+  color:black
 }
-.v-toolbar__title {
-  color:seagreen;
-}
-
 </style>

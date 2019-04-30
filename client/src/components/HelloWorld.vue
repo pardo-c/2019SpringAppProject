@@ -6,7 +6,7 @@
       <li>
         <a>
       <router-link to="about">
-      <v-btn small color="amber">
+      <v-btn medium color="amber">
            What does it mean to live forward?
     </v-btn>
      </router-link>
@@ -15,7 +15,7 @@
       <li>
         <a>
       <router-link to="uplift">
-      <v-btn small color="amber">
+      <v-btn medium color="amber">
           Uplift yourself!
     </v-btn>
      </router-link>
@@ -24,7 +24,7 @@
       <li>
         <a>
         <router-link to="motivate">
-      <v-btn small color="amber">
+      <v-btn medium color="amber">
         Don't feel like exercising?
     </v-btn>
      </router-link>
@@ -33,7 +33,7 @@
       <li>
         <a>
       <router-link to="register">
-      <v-btn small color="amber" v-if="!$store.state.isUserLoggedIn">
+      <v-btn medium color="amber" v-if="!$store.state.isUserLoggedIn">
         Register!
     </v-btn>
      </router-link>

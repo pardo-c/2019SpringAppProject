@@ -1,11 +1,12 @@
 <template>
 <v-layout column>
 <v-flex>
+  <v-card-text>
+  <p class="text-xs-center">
 <div class="white elevation-2">
-<v-toolbar flat dense class="purple">
-<v-toolbar-title>Login</v-toolbar-title>
+<v-toolbar flat dense class="amber">
+<v-toolbar-title><a>Login</a></v-toolbar-title>
 </v-toolbar>
-</div>
 <div class="pl-4 pr-4 pt-2 pb-2">
 <input
 type="email"
@@ -20,10 +21,12 @@ v-model="password"
 placeholder="password"
 />
 <br>
-<div class = "danger-alert" v-html="error"/>
+<div class ="danger-alert" v-html="error"/>
 <br>
-<button @click="login"> Login </button>
+<button @click="login"> Login</button>
 </div>
+</div>
+</v-card-text>
 </v-flex>
 </v-layout>
 </template>
@@ -62,5 +65,7 @@ export default {
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+a {
+  color: black
+}
 </style>

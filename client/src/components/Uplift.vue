@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p> This will be a place to post and read uplifting exercise stories </p>
+   <h1> Read uplifting stories to encourage you to exercise </h1>
   </div>
 </template>
 

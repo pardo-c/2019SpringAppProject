@@ -60,7 +60,7 @@ export default new Router({
       name: 'exercise',
       component: ViewExercise
     },
-    { // crete new path for motivate page
+    { // create new path for motivate page
       path: '/motivate',
       name: 'motivate',
       component: Motivate

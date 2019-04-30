@@ -1,5 +1,5 @@
 
-module.exports = (sequelize, DataTypes) => {
+/* module.exports = (sequelize, DataTypes) => {
     const Uplift = sequelize.define('Uplift', {
      // 
       story: DataTypes.TEXT
@@ -7,5 +7,5 @@ module.exports = (sequelize, DataTypes) => {
     Uplift.associate = function (models){
     }
     return Uplift
-  }
+  } */
   

@@ -4,6 +4,8 @@ const {
     Exercises,
     User,
     Bookmark
+    // Friends,
+    // Uplift
   } = require('../src/models')
 
 const Promise = require('bluebird')
@@ -11,6 +13,8 @@ const Promise = require('bluebird')
 const exercises = require('./exercises.json')
 const users = require('./users.json')
 const bookmarks = require('./bookmarks.json')
+// const friends = require('./friends.json')
+// const uplifts = require('./uplift.json')
 
 sequelize.sync({force: true})
   .then(async function () {
@@ -30,4 +34,14 @@ sequelize.sync({force: true})
         Bookmark.create(bookmark)
       })
     )
+    await Promise.all(
+        friends.map(friend => {
+          Friends.create(friend)
+        })
+      )
+    /* await Promise.all(
+      uplifts.map(uplift => {
+        Uplift.create(uplift)
+      })
+    ) */ 
 })

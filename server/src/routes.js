@@ -7,8 +7,10 @@ const AuthenticationControllerPolicy = require('./policies/AuthenticationControl
 // for exercises table
 const ExercisesController = require('./controllers/ExercisesController')
 
+const BookmarksController = require('./controllers/BookmarksController')
+
 // for Uplift table
-const UpliftController = require('./controllers/UpliftController')
+// const UpliftController = require('./controllers/UpliftController')
 
 // export routes associated with authentication
 module.exports = (app) => {
@@ -21,7 +23,7 @@ module.exports = (app) => {
   app.post('/login',
     AuthenticationController.login)
   
-  // call index method from EC
+  // call index method from ExerciseController(EC)
   app.get('/exercises',
     ExercisesController.index)
   // call show method from EC
@@ -33,10 +35,16 @@ module.exports = (app) => {
   app.put('/exercises/:exerciseId',
     ExercisesController.put)
 
-
-  app.post('/uplift',
+  // call methods from BookmarkController
+  app.get('/bookmarks',
+    BookmarksController.index)
+  app.post('/bookmarks',
+    BookmarksController.post)
+  app.delete('/bookmarks/:bookmarkId',
+    BookmarksController.delete)
+    
+  /* app.post('/uplift',
     UpliftController.post)
   app.get('/uplift',
-    UpliftController.index)
+    UpliftController.index) */
 }
-

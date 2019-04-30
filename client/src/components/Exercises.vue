@@ -46,9 +46,11 @@
 <script>
 import ExerciseService from '@/services/ExerciseService'
 import ExerciseSearchPanel from './ExerciseSearchPanel'
+import ViewBookmarks from './ViewBookmarks'
 export default {
   components: {
-    ExerciseSearchPanel
+    ExerciseSearchPanel,
+    ViewBookmarks
   },
   data () {
     // return exercises

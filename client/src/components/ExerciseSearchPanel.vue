@@ -10,7 +10,6 @@
 </template>
 
 <script>
-import _ from 'lodash'
 export default {
   data () {
     return {
@@ -19,7 +18,7 @@ export default {
   },
   // 20 min
   watch: {
-    search: _.debounce(async function (value) {
+    async search (value) {
       const route = {
         name: 'exercises'
       }
@@ -29,7 +28,7 @@ export default {
         }
         this.$router.push(route)
       }
-    }, 5000),
+    },
     // add watcher to search query string
     '$route.query.search': {
       // as input changes in search box, change handler and vice versa

@@ -1,4 +1,4 @@
-const {Uplift} = require('../models')
+/* const {Uplift} = require('../models')
 module.exports = {
   // define routes in express with end points.
   async index (req,res) {
@@ -27,4 +27,4 @@ module.exports = {
       })
     }
   }
-}
+} */
