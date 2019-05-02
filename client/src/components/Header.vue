@@ -13,12 +13,10 @@
           Uplift
     </v-btn>
   </v-toolbar-items>
-    <v-toolbar-items >
-    <router-link to="login">
-    <v-btn  flat dark v-if="$store.state.isUserLoggedIn">
+    <v-toolbar-items>
+    <v-btn class="mr-4" flat small outline color="black" v-if="$store.state.isUserLoggedIn" @click="navigateTo({name: 'friends'})">
           Friends
     </v-btn>
-     </router-link>
   </v-toolbar-items>
 <!-- v-spacer allows you to put things all the way to the right -->
   <v-spacer ></v-spacer>

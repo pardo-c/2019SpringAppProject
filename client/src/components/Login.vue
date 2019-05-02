@@ -13,7 +13,7 @@ type="email"
 name="email"
 v-model="email"
 placeholder="email address"/>
-<br>
+<br> <br>
 <input
 type="password"
 name="password"
@@ -23,7 +23,7 @@ placeholder="password"
 <br>
 <div class ="danger-alert" v-html="error"/>
 <br>
-<button @click="login"> Login</button>
+<v-btn small outline color="indigo" @click="login"> Login</v-btn>
 </div>
 </div>
 </v-card-text>
@@ -67,5 +67,10 @@ export default {
 <style scoped>
 a {
   color: black
+}
+input {
+  border-style:dashed;
+  border-width: thin; 
+  border-color: indigo
 }
 </style>

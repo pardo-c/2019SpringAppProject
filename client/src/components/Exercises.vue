@@ -55,6 +55,7 @@ import ExerciseService from '@/services/ExerciseService'
 import ExerciseSearchPanel from './ExerciseSearchPanel'
 import ViewBookmarks from './ViewBookmarks'
 export default {
+  // prop to embedd youtube
   props: [
     'youtubeId'
   ],

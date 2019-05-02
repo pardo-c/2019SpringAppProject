@@ -4,7 +4,7 @@
      <v-card-text>
       <p class="text-xs-center">
       <div class="white elevation-2">
-        <v-toolbar flat dense class="amber">
+        <v-toolbar flat dense class="orange">
         <v-toolbar-title><a>Register</a></v-toolbar-title>
         </v-toolbar>
         <div class="pl-4 pr-4 pt-2 pb-2">
@@ -13,7 +13,7 @@
             name="email"
             v-model="email"
             placeholder="email address"/>
-          <br>
+          <br> <br>
           <input
             type="password"
             name="password"
@@ -23,10 +23,10 @@
           <br>
           <div class ="error" v-html="error"/>
           <br>
-          <button
+          <v-btn small outline color="indigo" 
             @click="register">
             Register
-          </button>
+          </v-btn>
       </div>
      </div>
     </v-card-text>
@@ -70,5 +70,10 @@ export default {
 <style scoped>
 a{
   color:black
+}
+input {
+  border-style:dashed;
+  border-width: thin; 
+  border-color: indigo
 }
 </style>
