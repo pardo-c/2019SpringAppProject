@@ -12,7 +12,7 @@
         <div v-for="exercise in exercises"
           :key="exercise.id">
           <v-layout>
-            <v-flex xs6>
+            <v-flex xs4>
               <div class="exercise-name">
                 {{exercise.name}}
                 </div>
@@ -23,7 +23,7 @@
                 {{exercise.difficulty}}
                 </div>
               </v-flex>
-               <v-btn
+               <v-btn xs4
         @click="navigateTo({
           name: 'exercise',
           params: {
@@ -32,8 +32,15 @@
         })">
         View
         </v-btn>
-            <v-flex xs6>
+            <v-flex xs4>
               <img class="exercise-gifURL" :src="exercise.gifURL" />
+                </v-flex>
+                  <v-flex xs4>
+                  <youtube
+                    :video-id="exercise.youtubeId"
+                    :player-width="200"
+                    :player-height="200">
+                  </youtube>
                 </v-flex>
          </v-layout>
         </div>
@@ -48,6 +55,9 @@ import ExerciseService from '@/services/ExerciseService'
 import ExerciseSearchPanel from './ExerciseSearchPanel'
 import ViewBookmarks from './ViewBookmarks'
 export default {
+  props: [
+    'youtubeId'
+  ],
   components: {
     ExerciseSearchPanel,
     ViewBookmarks
