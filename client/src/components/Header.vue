@@ -9,7 +9,7 @@
     </v-btn>
   </v-toolbar-items>
    <v-toolbar-items class="mr-4">
-    <v-btn flat small outline color="black"  @click="navigateTo({name: 'uplift'})">
+    <v-btn flat small outline color="black"  @click="navigateTo({name: 'uplifts'})">
           Uplift
     </v-btn>
   </v-toolbar-items>

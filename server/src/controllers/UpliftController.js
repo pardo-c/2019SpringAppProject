@@ -1,27 +1,24 @@
-'use strict'
-const {Uplift} = require('../models')
+const {Uplifts} = require('../models')
 module.exports = {
   // define routes in express with end points.
-  async index (req,res) {
+  async index (req, res) {
     try {
-      // call sequelize object
-      const stories = await Uplift.findAll ({
-        // limit number of stories seen in UI
-        limit: 25
-      })    
-      res.send(stories)
+      const uplifts = await Uplifts.findAll({
+        limit: 10
+      })
+      res.send(uplifts)
     } catch (err) {
-        res.status(500).send({
-          error: 'An error has occured trying to retrieve uplifting stories.'
+      res.status(500).send({
+        error: 'an error has occured trying to fetch the songs'
       })
     }
   },
   async post (req,res) {
     try {
       // call sequelize object
-      const uplift = await Uplift.create(req.body)
+      const story = await Uplifts.create(req.body)
       // send back uplift object
-      res.send(uplift)
+      res.send(story)
     } catch (err) {
         res.status(500).send({
           error: 'An error has occured trying to create uplifting story. Sorry.'

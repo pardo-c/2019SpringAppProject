@@ -1,6 +1,5 @@
-'use strict';
 module.exports = (sequelize, DataTypes) => {
-    const Uplift = sequelize.define('Uplift', {
+    const Uplifts = sequelize.define('Uplifts', {
       id: {
         type: DataTypes.INTEGER,
         omitnull: true,
@@ -9,8 +8,9 @@ module.exports = (sequelize, DataTypes) => {
       },
       story: DataTypes.TEXT
     })
-    Uplift.associate = function (models){
+    Uplifts.associate = function (models){
     }
-    return Uplift
+
+    return Uplifts
   }
   

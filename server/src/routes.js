@@ -1,4 +1,3 @@
-'use strict';
 // a controller has all your endpoints defined
 const AuthenticationController = require('./controllers/AuthenticationController')
 
@@ -10,7 +9,7 @@ const ExercisesController = require('./controllers/ExercisesController')
 
 const BookmarksController = require('./controllers/BookmarksController')
 
-// for Uplift table
+// for Uplifts table
 const UpliftController = require('./controllers/UpliftController')
 
 const FriendsController = require('./controllers/FriendsController')
@@ -44,12 +43,14 @@ module.exports = (app) => {
     BookmarksController.post)
   app.delete('/bookmarks/:bookmarkId',
     BookmarksController.delete)
-    
-  app.post('/uplift',
-    UpliftController.post)
-  app.get('/uplift',
+  
+  // call methods for uplift
+  app.get('/uplifts',
     UpliftController.index)
+  app.post('/uplifts',
+    UpliftController.post)
 
+  // call methods for friends
   app.get('/friends',
     FriendsController.index)
 }

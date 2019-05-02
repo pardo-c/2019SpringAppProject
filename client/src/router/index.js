@@ -10,7 +10,7 @@ import ViewExercise from '@/components/ViewExercise'
 import ExerciseSearchPanel from '@/components/ExerciseSearchPanel'
 import Motivate from '@/components/Motivate'
 import About from '@/components/About'
-import Uplift from '@/components/Uplift'
+import Uplifts from '@/components/Uplifts'
 import Friends from '@/components/Friends'
 Vue.use(Router)
 export default new Router({
@@ -71,11 +71,11 @@ export default new Router({
       component: About
     },
     { // crete new path for uplift page
-      path: '/uplift',
-      name: 'uplift',
-      component: Uplift
+      path: '/uplifts',
+      name: 'uplifts',
+      component: Uplifts
     },
-    { // crete new path for uplift page
+    { // crete new path for friends page
       path: '/friends',
       name: 'friends',
       component: Friends

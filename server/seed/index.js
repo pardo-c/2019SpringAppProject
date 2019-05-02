@@ -6,7 +6,7 @@ const {
     User,
     Bookmark,
     Friends,
-    Uplift
+    Uplifts
   } = require('../src/models')
 
 const Promise = require('bluebird')
@@ -43,7 +43,7 @@ sequelize.sync({force: true})
       )
     await Promise.all(
       uplifts.map(uplift => {
-        Uplift.create(uplift)
+        Uplifts.create(uplift)
       })
     )
 })

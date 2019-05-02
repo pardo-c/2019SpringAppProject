@@ -14,7 +14,7 @@
       </li>
       <li>
         <a>
-      <router-link to="uplift">
+      <router-link to="uplifts">
       <v-btn medium color="amber">
           Uplift yourself!
     </v-btn>
