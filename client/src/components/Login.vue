@@ -70,7 +70,7 @@ a {
 }
 input {
   border-style:dashed;
-  border-width: thin; 
+  border-width: thin;
   border-color: indigo
 }
 </style>

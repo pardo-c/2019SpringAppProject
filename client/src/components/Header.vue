@@ -18,6 +18,11 @@
           Friends
     </v-btn>
   </v-toolbar-items>
+   <v-toolbar-items>
+    <v-btn class="mr-4" flat small outline color="black" v-if="$store.state.isUserLoggedIn" @click="navigateTo({name: 'dashboard'})">
+          Dashboard
+    </v-btn>
+  </v-toolbar-items>
 <!-- v-spacer allows you to put things all the way to the right -->
   <v-spacer ></v-spacer>
   <v-toolbar-items>

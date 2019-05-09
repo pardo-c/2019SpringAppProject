@@ -15,14 +15,6 @@ export default {
   data () {
     return {
       headers: [
-        {
-          text: 'Title',
-          value: 'title'
-        },
-        {
-          text: 'Artist',
-          value: 'artist'
-        }
       ],
       pagination: {
         sortBy: 'createdAt',

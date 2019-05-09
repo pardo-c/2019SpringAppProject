@@ -23,7 +23,7 @@
           <br>
           <div class ="error" v-html="error"/>
           <br>
-          <v-btn small outline color="indigo" 
+          <v-btn small outline color="indigo"
             @click="register">
             Register
           </v-btn>
@@ -73,7 +73,7 @@ a{
 }
 input {
   border-style:dashed;
-  border-width: thin; 
+  border-width: thin;
   border-color: indigo
 }
 </style>

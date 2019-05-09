@@ -78,12 +78,13 @@ export default {
       this.$router.push(route)
     },
     async setAsBookmark () {
+      const bookmark = {
+        exerciseId: this.$store.state.route.params.exerciseId,
+        userId: this.$store.state.user.id
+      }
       console.log(this.bookmark)
       try {
-        this.bookmark = (await BookmarksService.post({
-          exerciseId: this.$store.state.route.params.exerciseId,
-          userId: this.$store.state.user.id
-        })).data
+        this.bookmark = (await BookmarksService.post({bookmark})).data
       } catch (err) {
         console.log(err)
       }

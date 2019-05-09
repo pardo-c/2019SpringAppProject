@@ -1,4 +1,3 @@
-'use strict';
 module.exports = (sequelize, DataTypes) => {
     const Bookmark = sequelize.define('Bookmark', {
       id: {

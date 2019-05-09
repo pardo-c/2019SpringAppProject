@@ -36,7 +36,7 @@ module.exports = {
           error: 'you already have this set as a bookmark'
         })
       }
-      const newBookmark = await Bookmark.create(req.body)
+      const newBookmark = await Bookmark.create(req.query)
       const exercise = await Exercises.findById(exerciseId)
       const user = await User.findById(userId)
       await newBookmark.setUser(user)
