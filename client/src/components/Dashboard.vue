@@ -48,12 +48,9 @@
     >
       <v-btn @click="$refs.calendar.next()">
         Next
-        <v-icon
-          right
-          dark
-        >
-          keyboard_arrow_right
-        </v-icon>
+      <i class="material-design-icons">
+arrow_right_alt
+</i>
       </v-btn>
     </v-flex>
     <v-flex xs12 sm6 offset-sm3>
@@ -62,11 +59,7 @@
           <v-toolbar-side-icon></v-toolbar-side-icon>
           <v-toolbar-title>Inbox</v-toolbar-title>
           <v-spacer></v-spacer>
-          <v-btn icon>
-            <v-icon>search</v-icon>
-          </v-btn>
-          <v-btn icon>
-            <v-icon>check_circle</v-icon>
+          <v-btn> Trending Exercises
           </v-btn>
         </v-toolbar>
         <v-list two-line>
@@ -94,7 +87,7 @@ export default {
   data: () => ({
     type: 'month',
     start: '2019-01-01',
-    end: '2019-01-06',
+    end: '2050-01-01',
     typeOptions: [
       { text: 'Day', value: 'day' },
       { text: '4 Day', value: '4day' },
@@ -104,11 +97,7 @@ export default {
       { text: 'Custom Weekly', value: 'custom-weekly' }
     ],
     items: [
-      { action: '15 min', headline: 'Brunch this weekend?', title: 'Ali Connors', subtitle: "I'll be in your neighborhood doing errands this weekend. Do you want to hang out?" },
-      { action: '2 hr', headline: 'Summer BBQ', title: 'me, Scrott, Jennifer', subtitle: "Wish I could come, but I'm out of town this weekend." },
-      { action: '6 hr', headline: 'Oui oui', title: 'Sandra Adams', subtitle: 'Do you have Paris recommendations? Have you ever been?' },
-      { action: '12 hr', headline: 'Birthday gift', title: 'Trevor Hansen', subtitle: 'Have any ideas about what we should get Heidi for her birthday?' },
-      { action: '18hr', headline: 'Recipe to try', title: 'Britta Holt', subtitle: 'We should eat this: Grate, Squash, Corn, and tomatillo Tacos.' }
+      { action: '18hr', headline: 'Exercise to try', title: 'Squat Thrust', subtitle: 'Great for your glutes!' }
     ]
   })
 }
