@@ -1,25 +1,47 @@
 <template>
     <v-flex xs6 offset-xs3>
-     <v-card><v-card-text> <panel title="Search">
+     <v-card><v-card-text> <panel title="Search people by their status!">
       <v-autocomplete
         v-model="search"
         :items="status"
       >
       </v-autocomplete> </panel>
     </v-card-text>
-  </v-card> </v-flex>
+  </v-card>
+  <v-card><v-card-text> <panel title="Search people by their name!">
+    <v-autocomplete
+        v-model="search"
+        :items="friendNames"
+      >
+      </v-autocomplete> </panel>
+    </v-card-text>
+  </v-card>
+   </v-flex>
 </template>
 <script>
+import FriendsService from '@/services/FriendsService'
 export default {
   data () {
     return {
       status: [ 'fetus', 'baby', 'toddler', 'kid', 'superkid' ],
+      friendNames: [],
+      friends: null,
       search: ''
     }
   },
   // wait for user to enter something in search box
+  async mounted () {
+    // get request from backend
+    this.friends = (await FriendsService.index()).data
+    var friendNames = []
+    for (var i = 0; i < this.friends.length; i++) {
+      friendNames[i] += this.friends[i].name
+    }
+    this.friendNames = friendNames
+  },
   watch: {
     async search (value) {
+      this.friends = (await FriendsService.index()).data
       const route = {
         name: 'friends'
       }

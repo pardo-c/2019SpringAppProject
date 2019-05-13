@@ -48,9 +48,8 @@
     >
       <v-btn @click="$refs.calendar.next()">
         Next
-      <i class="material-design-icons">
-arrow_right_alt
-</i>
+      <v-icon> keyboard_arrow_right
+</v-icon>
       </v-btn>
     </v-flex>
     <v-flex xs12 sm6 offset-sm3>
