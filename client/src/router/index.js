@@ -12,6 +12,7 @@ import Motivate from '@/components/Motivate'
 import About from '@/components/About'
 import Uplifts from '@/components/Uplifts'
 import Friends from '@/components/Friends'
+import FriendsSearchPanel from '@/components/FriendsSearchPanel'
 import Dashboard from '@/components/Dashboard'
 Vue.use(Router)
 export default new Router({
@@ -80,6 +81,11 @@ export default new Router({
       path: '/friends',
       name: 'friends',
       component: Friends
+    },
+    { // create new path for search exercises
+      path: '/friends/friendssearch',
+      name: 'friends-search',
+      component: FriendsSearchPanel
     },
     { // crete new path for friends page
       path: '/dashboard',

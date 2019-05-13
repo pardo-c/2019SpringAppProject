@@ -1,26 +1,27 @@
 <template>
-  <panel title="Search">
     <v-flex xs6 offset-xs3>
-    <v-text-field
-      label="Filter by exercise name, type, or difficulty"
-      v-model="search"
-    ></v-text-field>
-    </v-flex>
-  </panel>
+     <v-card><v-card-text> <panel title="Search">
+      <v-autocomplete
+        v-model="search"
+        :items="status"
+      >
+      </v-autocomplete> </panel>
+    </v-card-text>
+  </v-card> </v-flex>
 </template>
-
 <script>
 export default {
   data () {
     return {
+      status: [ 'fetus', 'baby', 'toddler', 'kid', 'superkid' ],
       search: ''
     }
   },
-  // wait for user to enter in value
+  // wait for user to enter something in search box
   watch: {
     async search (value) {
       const route = {
-        name: 'exercises'
+        name: 'friends'
       }
       if (this.search !== '') {
         route.query = {
