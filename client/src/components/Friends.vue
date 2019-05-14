@@ -1,6 +1,7 @@
 <template>
 <v-flex>
 <friends-search-panel />
+<friend-name-search-panel />
 <br> <br>
 <v-flex xs6 offset-xs3>
   <panel title='Look at whose Living Forward!'>
@@ -21,9 +22,11 @@
 <script>
 import FriendsService from '@/services/FriendsService'
 import FriendsSearchPanel from './FriendsSearchPanel'
+import FriendNameSearchPanel from './FriendNameSearchPanel'
 export default {
   components: {
-    FriendsSearchPanel
+    FriendsSearchPanel,
+    FriendNameSearchPanel
   },
   data () {
     // return friends

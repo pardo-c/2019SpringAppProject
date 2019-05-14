@@ -11,7 +11,8 @@ module.exports = {
         friends = await Friends.findAll({
           where: {
             $or: [
-              'status'
+              'status',
+              'name'
             ].map(key => ({
               [key]: {
                 $like: `%${search}%`

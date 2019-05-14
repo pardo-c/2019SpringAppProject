@@ -13,6 +13,7 @@ import About from '@/components/About'
 import Uplifts from '@/components/Uplifts'
 import Friends from '@/components/Friends'
 import FriendsSearchPanel from '@/components/FriendsSearchPanel'
+import FriendNameSearchPanel from '@/components/FriendNameSearchPanel'
 import Dashboard from '@/components/Dashboard'
 Vue.use(Router)
 export default new Router({
@@ -82,10 +83,15 @@ export default new Router({
       name: 'friends',
       component: Friends
     },
-    { // create new path for search exercises
+    { // create new path for search status
       path: '/friends/friendssearch',
       name: 'friends-search',
       component: FriendsSearchPanel
+    },
+    { // create new path for search friend names
+      path: '/friends/friendnamesearch',
+      name: 'friend-name-search',
+      component: FriendNameSearchPanel
     },
     { // crete new path for friends page
       path: '/dashboard',
